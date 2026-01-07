@@ -8,6 +8,21 @@ Frontend en **Angular 21** para la Prueba Técnica.
 - `openapi.yaml`: contrato de la API (OpenAPI 3.0).
 - `front.png`: referencia visual del layout.
 
+## Pruebas Unitarias
+
+- `banco-front/src/app/app.spec.ts`
+- `banco-front/src/app/core/api/accounts-api.service.spec.ts`
+- `banco-front/src/app/core/api/api-error.interceptor.spec.ts`
+- `banco-front/src/app/core/api/api-error.spec.ts`
+- `banco-front/src/app/core/api/customers-api.service.spec.ts`
+- `banco-front/src/app/core/api/reports-api.service.spec.ts`
+- `banco-front/src/app/core/api/transactions-api.service.spec.ts`
+- `banco-front/src/app/layout/shell.component.spec.ts`
+- `banco-front/src/app/pages/accounts/accounts-page.component.spec.ts`
+- `banco-front/src/app/pages/customers/customers-page.component.spec.ts`
+- `banco-front/src/app/pages/reports/reports-page.component.spec.ts`
+- `banco-front/src/app/pages/transactions/transactions-page.component.spec.ts`
+
 ## Requisitos
 
 - Node.js + npm (el proyecto declara `npm@10.9.3`).
