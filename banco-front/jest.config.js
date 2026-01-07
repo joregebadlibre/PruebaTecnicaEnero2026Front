@@ -1,22 +1,19 @@
-import type { Config } from 'jest';
-
-const config: Config = {
+/** @type {import('jest').Config} */
+module.exports = {
   preset: 'jest-preset-angular',
-  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testMatch: ['**/?(*.)+(spec).ts'],
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
-      'ts-jest',
+      'jest-preset-angular',
       {
         tsconfig: '<rootDir>/tsconfig.spec.json',
         stringifyContentPathRegex: '\\.(html|svg)$',
       },
     ],
   },
-  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
+  transformIgnorePatterns: ['node_modules/(?!(@angular|rxjs|zone\.js|tslib|jest-preset-angular)/)'],
   moduleFileExtensions: ['ts', 'html', 'js', 'json', 'mjs'],
   collectCoverageFrom: ['src/**/*.ts', '!src/**/*.spec.ts'],
 };
-
-export default config;

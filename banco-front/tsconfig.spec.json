@@ -4,9 +4,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "module": "CommonJS",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "types": [
-      "jest"
+      "jest",
+      "node"
     ]
   },
   "include": [
